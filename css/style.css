@@ -1,10 +1,18 @@
 html{
+    /* font-size: 62.5%; */
     font-size: .625vw;
+}
+@font-face{
+    font-family: "test";
+    src:url('../fonts/afta-serif/AftaSerifThin-Regular.otf');
 }
 *{
     padding:0;
     margin:0;
     box-sizing: border-box;
+    /* word-spacing: 2px; */
+    letter-spacing: 1.4px;
+    font-family: "test";
 }
 .container{
     width:100%;
@@ -61,18 +69,19 @@ video{
     height: 10vh;
     z-index:0;
     opacity:1;
+    font-weight: bolder;
     background-color: rgba(128, 128, 128, 0);
-    margin-top:30vh;
-    /* margin-bottom: 40vh; */
+    margin-top:180px;
+    margin-bottom: 60px;
     text-align: center;
     font-size: 5rem;
     padding-top:5vh;
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-weight: bolder;
     color:white;
 } 
-
+.transparent span{
+    font-family: "test";
+}
 .hide1{
     animation-name: showme1;
     transform: translate(-55%,-85%);
@@ -106,6 +115,7 @@ video{
     animation-iteration-count: infinite;
 }
 .hideHolder{
+    font-family: "test";
     position: relative;
     width:13vw;
     display:inline-block;
@@ -304,20 +314,21 @@ video{
     padding-right: 1%;
 }
 .number{
-    font-size: 2.5rem;
     margin-left:2%;
     padding: 1%;
+    font-size: 1.5rem;
+
 }
 .menuBar{
     height:50%;
     display:flex;
     justify-content: space-evenly;
     padding-top: 3%;
+    font-size: 1.5rem;
 }
 .menuBar a{
     text-decoration: none;
     color:black;
-    font-size:2rem;
     vertical-align: middle;
 }
 .dropdown,.dropdown2{
@@ -325,7 +336,6 @@ video{
     flex-direction: column;
     height: 40vh;
     width:10%;
-    font-size:2rem;
     transition: height .5s;
     z-index: 3;
 
@@ -518,13 +528,13 @@ background-color: white;
             }
 }
 .buttonHolder{
+    display:flex;
+    justify-content: center;
     width:100%;
-    height:6vh;
+    height:60px;
     margin-bottom:40vh;
     margin-top:4vh;
-    position: relative;
-    top:0;
-    left:0;
+   
 
 }
 .buttonHolder>div:hover{
@@ -533,21 +543,20 @@ background-color: white;
     color:white;
 
 }
-.ButtonLeft{
- width:20%;
- height: 100%;
- background-color: rgb(180, 180, 180);
- font-size: 2rem;
-position:absolute;
-left:28%;
-top:0;
-
-    
+.ButtonLeft,.ButtonRight{
+    width:20%;
+    font-family: "test";
+    font-weight: bold;
+    margin-left:15px;
+    margin-right:15px;
+    background-color: rgb(180, 180, 180);
+    font-size: 2rem;
     text-align:center;
-    padding-top:1%; 
+    padding-top:20px;
+    padding-bottom: 20px;
 }
 
-
+/* 
 .ButtonRight{
             width:20%;
             height: 100%;
@@ -558,7 +567,7 @@ top:0;
         top:0;
        text-align:center;
        padding-top:1%; 
-   }
+   } */
    .threeDivs{
     width:100vw;
     height: 30%;
@@ -577,8 +586,7 @@ top:0;
     text-align: center;
     text-decoration: none;
     font-size:2.2rem;
-    line-height: 3rem;
-    word-spacing: .5rem;
+    font-family: "test";
     color:white;
     background-color:rgba(255, 255, 255, 0.2);
  }
