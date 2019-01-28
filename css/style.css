@@ -390,12 +390,11 @@ video{
     padding-bottom: 20px;
 }
 .threeDivs{
-    width:100vw;
+    width:100%;
     height: 200px;
     position: relative;
     display: flex;
     justify-content: center;
-    row-gap: 2px;
     overflow: hidden;
  }
  .threeDivs>a{
@@ -417,7 +416,7 @@ video{
  .threeDivs>a>img {
    opacity: 1;
    margin: 15%;
-   width: 20%;
+   width: 15%;
 
  }
 /* to define a side bar menu for mobiles*/
@@ -458,12 +457,15 @@ div.sidebarmenu{
 }
 .menuOpen,.menuClose{
     position:absolute;
-    top:20px;
-    left:20px;
+    top:40px;
+    left:30px;
     width:50px;
     height:50px;
     z-index:-1;
     display: none;
+}
+.menuClose{
+    top:10px;
 }
 /* .menuClose{
     display:none;
@@ -488,7 +490,6 @@ div.sidebarmenu{
 
 #close:target ~ .sidebarmenu {
     left:-50%;
-    background-color: green;
 
 }
 #close:target ~ .menuOpen{
