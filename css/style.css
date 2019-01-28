@@ -425,7 +425,7 @@ div.sidebarmenu{
     background-color: rgb(180, 180, 180);
     top:0;
     left:-90%;
-    width:50%;
+    width:300px;
     height: 100vh;
     padding-top:100px;
     padding-left:5%;
@@ -489,7 +489,7 @@ div.sidebarmenu{
 
 
 #close:target ~ .sidebarmenu {
-    left:-50%;
+    left:-320px;
 
 }
 #close:target ~ .menuOpen{
@@ -538,6 +538,11 @@ div.sidebarmenu{
         font-size: 2.5rem;
     }
 } 
+@media only screen and ( min-width:650px){
+    .sidebarmenu{
+        display: none;
+    }
+}
 @media only screen and (max-width: 650px) {
     /* .hideHolder{
         width:120px;
@@ -550,6 +555,12 @@ div.sidebarmenu{
     }
     .menuOpen,.menuClose{
         z-index:3;
+    }
+    .menuClose{
+        display:none;
+    }
+    .menuOpen{
+        display: block;
     }
     
 } 
