@@ -425,8 +425,8 @@ div.sidebarmenu{
     position: absolute;
     background-color: rgb(180, 180, 180);
     top:0;
-    left:-40%;
-    width:30%;
+    left:-90%;
+    width:50%;
     height: 100vh;
     padding-top:100px;
     padding-left:5%;
@@ -456,19 +456,21 @@ div.sidebarmenu{
     color:black;
 
 }
-.menuOpen, .menuClose{
+.menuOpen,.menuClose{
     position:absolute;
     top:20px;
     left:20px;
     width:50px;
     height:50px;
-    z-index:3;
-    display: block;
-
+    z-index:-1;
+    display: none;
 }
-.menuClose{
+/* .menuClose{
     display:none;
 }
+.menuOpen{
+    display: none;
+} */
 .menuClose a{
     text-decoration: none;
     color:white;
@@ -484,7 +486,17 @@ div.sidebarmenu{
 } 
 
 
+#close:target ~ .sidebarmenu {
+    left:-50%;
+    background-color: green;
 
+}
+#close:target ~ .menuOpen{
+    display:block;
+}
+#close:target ~ .menuClose{
+    display:none;
+} 
 #open:target ~ .sidebarmenu {
     left:0;
 
@@ -498,35 +510,45 @@ div.sidebarmenu{
 
 
 
-#close:target ~ .sidebarmenu {
-    left:-40%;
-
-}
-#close:target ~ .menuOpen{
-    display:block;
-}
-#close:target ~ .menuClose{
-    display:none;
-} 
-/* 
-@media only screen and (max-width: 1300px) {
-    .hideHolder{
-        width:16vw;
-    }
-}
 
 @media only screen and (max-width: 1100px) {
     .hideHolder{
-        width:18vw;
+        width:160px;
     }
-}
-@media only screen and (max-width: 1000px) {
-    .hideHolder{
-        width:22vw;
+    .transparent{
+        font-size: 4rem;
     }
-}
+} 
+
 @media only screen and (max-width: 800px) {
     .hideHolder{
-        width:25vw;
+        width:130px;
     }
-} */
+    .transparent{
+        font-size: 3rem;
+    }
+} 
+
+@media only screen and (max-width: 700px) {
+    .hideHolder{
+        width:120px;
+    }
+    .transparent{
+        font-size: 2.5rem;
+    }
+} 
+@media only screen and (max-width: 650px) {
+    /* .hideHolder{
+        width:120px;
+    }
+    .transparent{
+        font-size: 2.5rem;
+    } */
+    .topBar{
+        display:none;
+    }
+    .menuOpen,.menuClose{
+        z-index:3;
+    }
+    
+} 
