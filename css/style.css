@@ -278,6 +278,7 @@ video{
     display:flex;
     justify-content: space-between;
     z-index: 1;
+    box-shadow: 3px 3px 3px black;
 }
 .logo,.logo2{
     font-family: fantasy;
@@ -322,7 +323,7 @@ video{
 .tel i{
     font-size: 2rem;
     padding: 20%;
-    opacity: .5;
+    opacity: 0.5;
 }
 .tel i:hover{
     color:red;
