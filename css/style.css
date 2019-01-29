@@ -51,7 +51,7 @@ body{
 video{
     right: 0;
     bottom: 0;
-    min-width: 100%; 
+    min-width: 100%;
     min-height: 100%;
 
 }
@@ -278,14 +278,32 @@ video{
     justify-content: space-between;
     z-index: 1;
 }
-.logo{
+.logo,.logo2{
     font-family: fantasy;
     padding-left: 5%;
     font-size: 6rem;
     font-weight: bold;
     padding-top:2vh;
 }
-
+.logo2{
+    display:flex;
+    flex-direction: column;
+    
+    top:0;
+    left:0;
+    position: absolute;
+    width:100%;
+    display: none;
+    text-align: center;
+    background-color: rgb(180, 180, 180);
+    padding:0;
+    margin-top:0;
+    padding-top:20px;
+}
+.logo2>img{
+    width:100px;
+    height:100px;
+}
 .infos{
     display:flex;
     flex-direction: column;
@@ -351,7 +369,7 @@ video{
     width:300%;
     padding-left:2%;
     overflow: hidden;
-    transition: height .4s;  
+    transition: height .4s;
 }
 .dropdown:hover>.dropdown2{
     height: 280px;
@@ -363,12 +381,10 @@ video{
 }
 
 .buttonHolder{
-    display:flex;
-    justify-content: center;
     width:100%;
-    height:60px;
     margin-bottom:40vh;
     margin-top:4vh;
+    position: relative;
 }
 .buttonHolder>div:hover{
     background-color:rgba(255, 255, 255, 0.2);
@@ -377,30 +393,39 @@ video{
 
 }
 .ButtonLeft,.ButtonRight{
+    position: absolute;
+    left:50%;
     width:250px;
+    height: 50px;
     font-family: "test";
     font-weight: bold;
-    margin-left:15px;
-    margin-right:15px;
     background-color: rgb(180, 180, 180);
     color:rgb(80, 80, 80);
-
     font-size: 1.5rem;
     text-align:center;
-    padding-top:20px;
-    padding-bottom: 20px;
+    display:table;
+    padding-top:15px;
+    padding-bottom: 5px;
 }
+
+.ButtonLeft{
+    transform: translatex(-110%);
+}
+.ButtonRight{
+    transform: translatex(10%);
+}
+
 .threeDivs{
     width:100%;
-    height: 200px;
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     overflow: hidden;
  }
  .threeDivs>a{
     width:200px;
-    height: 100%;
+    min-height: 200px;
     margin-left: 2px;
     padding-left:2%;
     padding-right: 2%;
@@ -430,19 +455,18 @@ div.sidebarmenu{
     padding-top:100px;
     padding-left:5%;
     z-index:2;
-    opacity: 1;
     transition:left 1s;
 }
 
 .sidebarmenu>ul{
     font-size:1.6rem;
     font-weight: bold;
-    list-style-type:none;  
+    list-style-type:none;
 }
 .sidebarmenu>ul ul{
     font-size:1.2rem;
     font-weight: bold;
-    list-style-type:none; 
+    list-style-type:none;
     padding-left:60px;
 }
 .sidebarmenu li{
@@ -453,7 +477,14 @@ div.sidebarmenu{
 }
 .sidebarmenu a{
     text-decoration:none;
+    color:white;
+
+}
+.sidebarmenu a:hover{
     color:black;
+    /* text-shadow: rgb(230, 230, 230);
+      */
+        text-shadow: 2px 2px 4px #000000;
 
 }
 .menuOpen,.menuClose{
@@ -465,8 +496,23 @@ div.sidebarmenu{
     z-index:-1;
     display: none;
 }
-
-
+.menuClose>a::after{
+    position: absolute;
+    top:-10px;
+    left:-30px;
+    left:0;
+    width:30px;
+    height: 10px;
+    content:"close";
+    background-color: rgb(180, 180, 180);
+    font-size: 12px;
+    text-align: center;
+    opacity:0;
+    transition: opacity 0.5s;
+}
+.menuClose>a:hover::after{
+    opacity:1;
+}
 .menuClose a{
     text-decoration: none;
     color:white;
@@ -480,7 +526,7 @@ div.sidebarmenu{
     height: 3px;
     margin-top: 4px;
     width: 25px;
-} 
+}
 
 
 #close:target ~ .sidebarmenu {
@@ -492,7 +538,7 @@ div.sidebarmenu{
 }
 #close:target ~ .menuClose{
     display:none;
-} 
+}
 #open:target ~ .sidebarmenu {
     left:0;
 
@@ -502,7 +548,7 @@ div.sidebarmenu{
 }
 #open:target ~ .menuClose{
     display:block;
-} 
+}
 
 
 
@@ -514,7 +560,7 @@ div.sidebarmenu{
     .transparent{
         font-size: 4rem;
     }
-} 
+}
 
 @media only screen and (max-width: 800px) {
     .hideHolder{
@@ -523,7 +569,7 @@ div.sidebarmenu{
     .transparent{
         font-size: 3rem;
     }
-} 
+}
 
 @media only screen and (max-width: 700px) {
     .hideHolder{
@@ -532,19 +578,25 @@ div.sidebarmenu{
     .transparent{
         font-size: 2.5rem;
     }
-} 
+}
 @media only screen and ( min-width:650px){
     .sidebarmenu{
         display: none;
     }
 }
 @media only screen and (max-width: 650px) {
-    /* .hideHolder{
-        width:120px;
-    }
-    .transparent{
-        font-size: 2.5rem;
-    } */
+   .logo2{
+       display:block;
+   }
+  .ButtonLeft{
+      left:50%;
+      transform: translateX(-50%);
+
+  }
+  .ButtonRight{
+      left:50%;
+    transform: translate(-50%, 160%);
+  }
     .topBar{
         display:none;
     }
@@ -557,10 +609,16 @@ div.sidebarmenu{
     .menuOpen{
         display: block;
     }
-    
-} 
+    .threeDivs>a{
+        width:350px;
+        margin-bottom: 5px;
+        padding-bottom: 10px;
+        padding-top:0px;
+    }
+
+}
 #ulHide:target~.sidebarmenu>ul>li>ul {
-    display:inline-block;    
+    display:inline-block;
 }
 #ulHide:target~.sidebarmenu{
     display: block;
