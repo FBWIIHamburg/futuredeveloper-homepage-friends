@@ -408,7 +408,7 @@ video{
     text-decoration: none;
     font-size:2rem;
     font-family: "test";
-    color:rgb(80, 80, 80);
+    color:white;
     background-color:rgba(255, 255, 255, 0.2);
  }
  .threeDivs>a:hover{
@@ -482,7 +482,8 @@ div.sidebarmenu{
 }
 .menuOpen span{
     display:inline-block;
-    background-color: rgb(80,80,80);
+    /* background-color: rgb(80,80,80); */
+    background-color: white;
     height: 3px;
     margin-top: 4px;
     width: 25px;
@@ -572,6 +573,18 @@ div.sidebarmenu{
     display: block;
     left:0;
 }
+#ulHide:target~.menuClose{
+    display:block;
+}
+#ulHide:target~.menuOpen{
+    display:none;
+}
 #ulHide~.sidebarmenu>ul>li>ul{
 display:none;
+}
+#open,#close,#ulHide{
+    position: absolute;
+    display:none;
+    top:0;
+    left:0;
 }
