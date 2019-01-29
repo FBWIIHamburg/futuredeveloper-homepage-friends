@@ -51,8 +51,9 @@ body{
 video{
     right: 0;
     bottom: 0;
-    min-width: 100%; 
+    min-width: 100%;
     min-height: 100%;
+
 }
 /* iframe {
     pointer-events: none;
@@ -81,6 +82,7 @@ video{
     font-family: "test";
     padding-left:5px;
     padding-right:5px;
+    color:white;
 }
 .hide1{
     animation-name: showme1;
@@ -276,15 +278,35 @@ video{
     display:flex;
     justify-content: space-between;
     z-index: 1;
+    box-shadow: 3px 3px 3px black;
 }
-.logo{
+.logo,.logo2{
     font-family: fantasy;
     padding-left: 5%;
     font-size: 6rem;
     font-weight: bold;
     padding-top:2vh;
 }
-
+.logo2{
+    display:flex;
+    flex-direction: column;
+    font-size:20px;
+    top:0;
+    left:0;
+    position: absolute;
+    width:100%;
+    display: none;
+    text-align: center;
+    background-color: rgb(180, 180, 180);
+    padding:0;
+    margin-top:0;
+    padding-top:20px;
+    padding-block-end: 20px;
+}
+.logo2>img{
+    width:100px;
+    height:100px;
+}
 .infos{
     display:flex;
     flex-direction: column;
@@ -301,7 +323,7 @@ video{
 .tel i{
     font-size: 2rem;
     padding: 20%;
-    opacity: .5;
+    opacity: 0.5;
 }
 .tel i:hover{
     color:red;
@@ -329,7 +351,10 @@ video{
     color:black;
     vertical-align: middle;
 }
+.menuBar a:hover{
+    text-shadow: 2px 2px 4px #000000;
 
+}
 .dropdown{
     position: relative;
     transition: background-color .5s;
@@ -350,7 +375,7 @@ video{
     width:300%;
     padding-left:2%;
     overflow: hidden;
-    transition: height .4s;  
+    transition: height .4s;
 }
 .dropdown:hover>.dropdown2{
     height: 280px;
@@ -362,14 +387,10 @@ video{
 }
 
 .buttonHolder{
-    display:flex;
-    justify-content: center;
     width:100%;
-    height:60px;
     margin-bottom:40vh;
     margin-top:4vh;
-
-
+    position: relative;
 }
 .buttonHolder>div:hover{
     background-color:rgba(255, 255, 255, 0.2);
@@ -378,29 +399,45 @@ video{
 
 }
 .ButtonLeft,.ButtonRight{
+    position: absolute;
+    left:50%;
     width:250px;
+    height: 50px;
     font-family: "test";
     font-weight: bold;
-    margin-left:15px;
-    margin-right:15px;
     background-color: rgb(180, 180, 180);
+    color:rgb(80, 80, 80);
     font-size: 1.5rem;
     text-align:center;
-    padding-top:20px;
-    padding-bottom: 20px;
+    display:table;
+    padding-top:15px;
+    padding-bottom: 5px;
 }
+
+.ButtonLeft{
+    transform: translatex(-110%);
+}
+.ButtonRight{
+    transform: translatex(10%);
+}
+
 .threeDivs{
+<<<<<<< HEAD
     width:100vw;
     height: 200px;
+=======
+    width:100%;
+>>>>>>> 38fab4bfb223a6829a00fb24ad9634f3dce029ee
     position: relative;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     row-gap: 2px;
     overflow: hidden;
  }
  .threeDivs>a{
     width:200px;
-    height: 100%;
+    min-height: 200px;
     margin-left: 2px;
     padding-left:2%;
     padding-right: 2%;
@@ -417,8 +454,12 @@ video{
  .threeDivs>a>img {
    opacity: 1;
    margin: 15%;
+<<<<<<< HEAD
    width: 20%;
 
+=======
+   width: 30%;
+>>>>>>> 38fab4bfb223a6829a00fb24ad9634f3dce029ee
  }
 /* to define a side bar menu for mobiles*/
 div.sidebarmenu{
@@ -431,18 +472,18 @@ div.sidebarmenu{
     padding-top:100px;
     padding-left:5%;
     z-index:2;
-    opacity: 1;
     transition:left 1s;
 }
+
 .sidebarmenu>ul{
     font-size:1.6rem;
     font-weight: bold;
-    list-style-type:none;  
+    list-style-type:none;
 }
 .sidebarmenu>ul ul{
     font-size:1.2rem;
     font-weight: bold;
-    list-style-type:none; 
+    list-style-type:none;
     padding-left:60px;
 }
 .sidebarmenu li{
@@ -453,7 +494,14 @@ div.sidebarmenu{
 }
 .sidebarmenu a{
     text-decoration:none;
+    color:white;
+
+}
+.sidebarmenu a:hover{
     color:black;
+    /* text-shadow: rgb(230, 230, 230);
+      */
+        text-shadow: 2px 2px 4px #000000;
 
 }
 .menuOpen, .menuClose{
@@ -466,8 +514,27 @@ div.sidebarmenu{
     display: block;
 
 }
+<<<<<<< HEAD
 .menuClose{
     display:none;
+=======
+.menuClose>a::after{
+    position: absolute;
+    top:-10px;
+    left:-30px;
+    left:0;
+    width:30px;
+    height: 10px;
+    content:"close";
+    background-color: rgb(180, 180, 180);
+    font-size: 12px;
+    text-align: center;
+    opacity:0;
+    transition: opacity 0.5s;
+}
+.menuClose>a:hover::after{
+    opacity:1;
+>>>>>>> 38fab4bfb223a6829a00fb24ad9634f3dce029ee
 }
 .menuClose a{
     text-decoration: none;
@@ -477,14 +544,25 @@ div.sidebarmenu{
 }
 .menuOpen span{
     display:inline-block;
-    background-color: rgb(80,80,80);
+    /* background-color: rgb(80,80,80); */
+    background-color: white;
     height: 3px;
     margin-top: 4px;
     width: 25px;
-} 
+}
 
 
 
+<<<<<<< HEAD
+=======
+}
+#close:target ~ .menuOpen{
+    display:block;
+}
+#close:target ~ .menuClose{
+    display:none;
+}
+>>>>>>> 38fab4bfb223a6829a00fb24ad9634f3dce029ee
 #open:target ~ .sidebarmenu {
     left:0;
 
@@ -494,13 +572,14 @@ div.sidebarmenu{
 }
 #open:target ~ .menuClose{
     display:block;
-} 
+}
 
 
 
 #close:target ~ .sidebarmenu {
     left:-40%;
 
+<<<<<<< HEAD
 }
 #close:target ~ .menuOpen{
     display:block;
@@ -510,23 +589,109 @@ div.sidebarmenu{
 } 
 /* 
 @media only screen and (max-width: 1300px) {
+=======
+@media only screen and (max-width: 1100px) {
+    .hideHolder{
+        width:160px;
+    }
+    .transparent{
+        font-size: 4rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+>>>>>>> 38fab4bfb223a6829a00fb24ad9634f3dce029ee
     .hideHolder{
         width:16vw;
     }
+<<<<<<< HEAD
+=======
+    .transparent{
+        font-size: 3rem;
+    }
+>>>>>>> 38fab4bfb223a6829a00fb24ad9634f3dce029ee
 }
 
 @media only screen and (max-width: 1100px) {
     .hideHolder{
+<<<<<<< HEAD
         width:18vw;
     }
 }
 @media only screen and (max-width: 1000px) {
     .hideHolder{
         width:22vw;
+=======
+        width:120px;
+    }
+    .transparent{
+        font-size: 2.5rem;
+    }
+}
+@media only screen and ( min-width:650px){
+    .sidebarmenu{
+        display: none;
+    }
+}
+@media only screen and (max-width: 650px) {
+   .logo2{
+       display:block;
+   }
+  .ButtonLeft{
+      left:50%;
+      transform: translateX(-50%);
+
+  }
+  .ButtonRight{
+      left:50%;
+    transform: translate(-50%, 160%);
+  }
+    .topBar{
+        display:none;
+    }
+    .menuOpen,.menuClose{
+        z-index:3;
+    }
+    .menuClose{
+        display:none;
+>>>>>>> 38fab4bfb223a6829a00fb24ad9634f3dce029ee
     }
 }
 @media only screen and (max-width: 800px) {
     .hideHolder{
         width:25vw;
     }
+<<<<<<< HEAD
 } */
+=======
+    .threeDivs>a{
+        width:350px;
+        margin-bottom: 5px;
+        padding-bottom: 10px;
+        padding-top:0px;
+    }
+
+}
+#ulHide:target~.sidebarmenu>ul>li>ul {
+    display:inline-block;
+}
+#ulHide:target~.sidebarmenu{
+    display: block;
+    left:0;
+}
+#ulHide:target~.menuClose{
+    display:block;
+}
+#ulHide:target~.menuOpen{
+    display:none;
+}
+#ulHide~.sidebarmenu>ul>li>ul{
+display:none;
+}
+#open,#close,#ulHide{
+    position: absolute;
+    display:none;
+    top:0;
+    left:0;
+}
+>>>>>>> 38fab4bfb223a6829a00fb24ad9634f3dce029ee
