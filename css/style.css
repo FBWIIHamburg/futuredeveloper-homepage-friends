@@ -465,15 +465,8 @@ div.sidebarmenu{
     z-index:-1;
     display: none;
 }
-.menuClose{
-    top:10px;
-}
-/* .menuClose{
-    display:none;
-}
-.menuOpen{
-    display: none;
-} */
+
+
 .menuClose a{
     text-decoration: none;
     color:white;
