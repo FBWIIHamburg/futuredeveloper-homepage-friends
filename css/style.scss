@@ -23,8 +23,8 @@ $ligthgray: rgb(251, 251, 251);
 }
 .container{
     width:100%;
-    animation-name: opacity;
-    animation-duration: 5s;
+    // animation-name: opacity;
+    // animation-duration: 5s;
     overflow: hidden;
     position: fixed;
     /* 16:9 */
@@ -48,14 +48,14 @@ body{
     padding:0;
 }
 
-@keyframes opacity{
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
+// @keyframes opacity{
+//     from{
+//         opacity: 0;
+//     }
+//     to{
+//         opacity: 1;
+//     }
+// }
 video{
     right: 0;
     bottom: 0;
@@ -554,19 +554,27 @@ div.sidebarmenu{
 .mainPage{
     &>span{
         display:none;
+        position: absolute;
+        top:0;
+        left:0;
     }
     width:100%;
+    min-height: 100vh;
     background-color: white;
-    margin-bottom: 50px;
     z-index:1;
-    display:flex;
-    flex-wrap: wrap;
+    // display:flex;
+    // flex-wrap: wrap;
+    text-align: center;
     justify-content: space-evenly;
     &>.leftpage{
         @extend %commonpages;
         background-color: $ligthgray;
         overflow: hidden;
         border: 1px solid $darkgray;
+        float: left;
+        margin-left:2.5%;
+        margin-right:2.5%;
+        
 
         &>.tabs{
             width:100%;
@@ -625,6 +633,7 @@ div.sidebarmenu{
                          font-size: 2rem;
                          box-shadow: 1px 1px 8px 1px #888888;
                          margin-top: 30px;
+                         float: left;
                          &:hover{
                              background-color: $midgray;
                              font-size: 2.02rem;
@@ -636,6 +645,7 @@ div.sidebarmenu{
                         width:100%;
                         height: 100px;
                         margin-top:30px;
+                        float: left;
                         img{
                          width:33%;
                          float: left;
@@ -676,9 +686,52 @@ div.sidebarmenu{
     }
     .rightpage{
         @extend %commonpages;
+        float: left;
+        margin-left:2.5%;
+        margin-right: 2.5%;
     }
+    .rightpage{
+        @extend %commonpages;
+        background-color: $ligthgray;
+        overflow: hidden;
+        border: 1px solid $darkgray;
+        padding:30px;
+        p{
+            font-size:15px;
+            font-weight: bold;
+            padding-top:30px;
+            padding-bottom:30px;
+            padding-right:0;
+        }
+        >div{ 
+            width:100%;
+            display:flex;
+            justify-content: space-evenly;
+            &>.imgtxt{
+                width:25%;
+                text-align: center;
+                img{
+                    width:100%;
+                    border-radius: 50%;
+                    float:left;
+                    margin-bottom: 10px;
+                }
+                h1{
+                    color:green;
+                    width:100%;
+                    font-size: 1.8rem;
+                    font-weight: bolder;
+                    font-family: fantasy;
+                    
+                }
     
+            }
+        }
+
+
+    }
 }
+
 
 /* T A R G E T S    T A R G E T S   T A R G E T S   T A R G E T S   T A R G E T S     */
 

@@ -24,10 +24,6 @@ html {
 
 .container {
   width: 100%;
-  -webkit-animation-name: opacity;
-          animation-name: opacity;
-  -webkit-animation-duration: 5s;
-          animation-duration: 5s;
   overflow: hidden;
   position: fixed;
   /* 16:9 */
@@ -63,24 +59,6 @@ html {
 body {
   margin: 0;
   padding: 0;
-}
-
-@-webkit-keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes opacity {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 video {
@@ -824,14 +802,10 @@ div.sidebarmenu {
 /* HERE IS THE SECOND PART OF THE PAGE... AFTER THE VIDEO BACKGROUND WITH TWO SMALL PAGES ASIDE EACHOTHER*/
 .mainPage {
   width: 100%;
+  min-height: 100vh;
   background-color: white;
-  margin-bottom: 50px;
   z-index: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  text-align: center;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -839,12 +813,18 @@ div.sidebarmenu {
 
 .mainPage > span {
   display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .mainPage > .leftpage {
   background-color: #fbfbfb;
   overflow: hidden;
   border: 1px solid #b4b4b4;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 
 .mainPage > .leftpage > .tabs {
@@ -908,6 +888,7 @@ div.sidebarmenu {
   -webkit-box-shadow: 1px 1px 8px 1px #888888;
           box-shadow: 1px 1px 8px 1px #888888;
   margin-top: 30px;
+  float: left;
 }
 
 .mainPage > .leftpage .tabcontainer .firsttab a:hover {
@@ -919,6 +900,7 @@ div.sidebarmenu {
   width: 100%;
   height: 100px;
   margin-top: 30px;
+  float: left;
 }
 
 .mainPage > .leftpage .tabcontainer .firsttab .images img {
@@ -957,6 +939,57 @@ div.sidebarmenu {
 
 .mainPage > .leftpage .tabcontainer .three {
   display: none;
+}
+
+.mainPage .rightpage {
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+}
+
+.mainPage .rightpage {
+  background-color: #fbfbfb;
+  overflow: hidden;
+  border: 1px solid #b4b4b4;
+  padding: 30px;
+}
+
+.mainPage .rightpage p {
+  font-size: 15px;
+  font-weight: bold;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 0;
+}
+
+.mainPage .rightpage > div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.mainPage .rightpage > div > .imgtxt {
+  width: 25%;
+  text-align: center;
+}
+
+.mainPage .rightpage > div > .imgtxt img {
+  width: 100%;
+  border-radius: 50%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+.mainPage .rightpage > div > .imgtxt h1 {
+  color: green;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: bolder;
+  font-family: fantasy;
 }
 
 /* T A R G E T S    T A R G E T S   T A R G E T S   T A R G E T S   T A R G E T S     */
