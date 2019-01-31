@@ -802,7 +802,7 @@ div.sidebarmenu {
 /* HERE IS THE SECOND PART OF THE PAGE... AFTER THE VIDEO BACKGROUND WITH TWO SMALL PAGES ASIDE EACHOTHER*/
 .mainPage {
   width: 100%;
-  min-height: 100vh;
+  min-height: 120vh;
   background-color: white;
   z-index: 1;
   text-align: center;
@@ -872,7 +872,7 @@ div.sidebarmenu {
   font-weight: bold;
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-right: 0;
+  padding-right: 10px;
 }
 
 .mainPage > .leftpage .tabcontainer .firsttab a {
@@ -918,19 +918,23 @@ div.sidebarmenu {
 }
 
 .mainPage > .leftpage .tabcontainer .firsttab .textImage .text {
-  width: 70%;
+  width: 60%;
   float: left;
+  opacity: 0.5;
 }
 
 .mainPage > .leftpage .tabcontainer .firsttab .textImage .finger {
-  width: 35%;
+  width: 40%;
   padding-top: 30px;
+  overflow: hidden;
+  opacity: 0.5;
+  text-align: center;
 }
 
 .mainPage > .leftpage .tabcontainer .firsttab .textImage .finger img {
   border: 2px solid black;
   border-radius: 10px;
-  margin-left: 10px;
+  width: 100%;
 }
 
 .mainPage > .leftpage .tabcontainer .two {
@@ -958,7 +962,6 @@ div.sidebarmenu {
   font-size: 15px;
   font-weight: bold;
   padding-top: 30px;
-  padding-bottom: 30px;
   padding-right: 0;
 }
 
@@ -1132,6 +1135,10 @@ div.sidebarmenu {
   .transparent {
     font-size: 2.5rem;
   }
+  .mainPage .leftpage .tabcontainer .textImage .text p,
+  .mainPage .rightpage p {
+    font-size: 12px;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -1155,6 +1162,13 @@ div.sidebarmenu {
   }
   .transparent {
     font-size: 2.5rem;
+  }
+  .mainPage > .leftpage, .mainPage .leftpage,
+  .mainPage > .leftpage, .mainPage .rightpage {
+    width: 95%;
+  }
+  .mainPage {
+    min-height: 189vh;
   }
 }
 

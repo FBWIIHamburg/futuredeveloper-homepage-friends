@@ -559,7 +559,7 @@ div.sidebarmenu{
         left:0;
     }
     width:100%;
-    min-height: 100vh;
+    min-height: 120vh;
     background-color: white;
     z-index:1;
     // display:flex;
@@ -618,7 +618,7 @@ div.sidebarmenu{
                      font-weight: bold;
                      padding-top:30px;
                      padding-bottom:30px;
-                     padding-right:0;
+                     padding-right:10px;
                  }
                  
                 a{
@@ -657,17 +657,21 @@ div.sidebarmenu{
                     margin:0;
                     padding:0;
                    .text{
-                       width:70%;
+                       width:60%;
                        float: left;
+                       opacity: 0.5;
                    }
                    .finger{
-                       width:35%;
+                       width:40%;
                        padding-top:30px;
+                       overflow: hidden;
+                       opacity:0.5;
+                       text-align: center;
                        
                        img{
                            border:2px solid black;
                            border-radius: 10px;
-                           margin-left:10px;
+                           width:100%;
                           
                        }                       
                    }
@@ -700,7 +704,7 @@ div.sidebarmenu{
             font-size:15px;
             font-weight: bold;
             padding-top:30px;
-            padding-bottom:30px;
+            // padding-bottom:30px;
             padding-right:0;
         }
         >div{ 
@@ -862,6 +866,10 @@ display:none;
     .transparent{
         font-size: 2.5rem;
     }
+    .mainPage .leftpage .tabcontainer .textImage .text p,
+    .mainPage .rightpage p{
+        font-size:12px;
+    }
 }
 @media only screen and (max-width: 800px) {
     .hideHolder{
@@ -892,6 +900,13 @@ display:none;
     .transparent{
         font-size: 2.5rem;
     }
+    .mainPage > .leftpage, .mainPage .leftpage,
+    .mainPage > .leftpage, .mainPage .rightpage{
+        width:95%;
+    }
+     .mainPage{
+         min-height: 189vh;
+     }
 }
 @media only screen and ( min-width:650px){
   
