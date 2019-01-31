@@ -100,3 +100,48 @@
         }     
 
 } 
+
+.bcw-web{
+    background-color:#5bbad5;
+    width: 100%;
+    position: relative;
+    opacity: 0.9;
+    height: 50vh;
+    padding-top: 10vh;
+    align-items: center;
+    display: flex;
+    
+    
+}
+.bcw-web div{
+    width: 25%;
+    height: 50vh;
+    margin-left: 70px;
+      
+}
+.bcw-web div h1{
+    padding-top: 3vh;
+}
+.bcw-web div p{
+    text-align: center;
+    padding: 5vh 5vh;
+
+}
+
+button {
+    background-color: #5bbad5;
+    border: 2px solid white;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: white;
+    color: black;
+}
