@@ -8,6 +8,8 @@
     background-position: top;
     clip-path: polygon(0 100%, 0 0, 100% 18%, 100% 100%);
     position: relative;  
+    width: 100%;
+    overflow: hidden;
 }
 
 .mont-container h1{
@@ -38,8 +40,6 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-
-     
 }
 
 .mont-firstDiv div{
@@ -95,9 +95,7 @@
 
     .mont-firstDiv div{
         width: 50%;
-        position: relative;
-        
-                
+        position: relative;        
         }     
 
 } 
@@ -112,14 +110,14 @@
     padding-top: 10vh;
     align-items: center;
     display: flex;
-    clip-path: polygon(100% 0, 100% 100%, 0 82%, 0 0);
-    
+    clip-path: polygon(100% 0, 100% 100%, 0 82%, 0 0); 
+    overflow: hidden;
 }
 .bcw-web div{
     width: 25%;
     height: 50vh;
-    margin-left: 70px;
-      
+   
+    text-align: center;
 }
 .bcw-web div h1{
     padding-top: 3vh;
@@ -127,9 +125,7 @@
 .bcw-web div p{
     text-align: center;
     padding: 5vh 5vh;
-
 }
-
 button {
     background-color: #5bbad5;
     border: 2px solid white;
@@ -152,8 +148,8 @@ button:hover {
 .headbuttonDiv{
     display: block;
    
-    justify-items: center;
-    justify-content: center;
+    
+    text-align: center;
    
 }
 .bigHead{
@@ -179,8 +175,8 @@ button:hover {
     margin: 4px 2px;
     transition-duration: 0.4s;
     cursor: pointer;
-    align-content: center;
-    margin-left: 40vw;
+    
+   
 }
 .bigButton:hover{
     background-color: transparent;
