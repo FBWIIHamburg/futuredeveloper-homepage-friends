@@ -995,6 +995,89 @@ div.sidebarmenu {
   font-family: fantasy;
 }
 
+/* HERE IS THE  END OF THE SECOND PART OF THE PAGE...     */
+/* HERE IS THE BIGGINING OF THE ROLLING TEXT   */
+.rollingbase {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  background-color: yellow;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.rollingbase > #goleft1, .rollingbase > #goleft2, .rollingbase > #goleft3, .rollingbase > #goleft4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  display: none;
+}
+
+.rollingbase > #goright1, .rollingbase > #goright2, .rollingbase > #goright3, .rollingbase > #goright4 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  display: none;
+}
+
+.rollingbase .rightarrow {
+  position: absolute;
+  top: 50%;
+  right: 50px;
+  font-size: 30px;
+  color: red;
+  display: none;
+}
+
+.rollingbase .leftarrow {
+  position: absolute;
+  top: 50%;
+  left: 50px;
+  font-size: 30px;
+  color: red;
+  display: none;
+}
+
+.rollingbase .oneR {
+  display: block;
+}
+
+.rollingbase .oneL {
+  display: block;
+}
+
+.rollingbase .rollingwindow {
+  width: 800px;
+  height: 300px;
+  opacity: 1;
+  background-color: green;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.rollingbase .rollingwindow .rollingtext {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  padding: 40px;
+  width: 400%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.rollingbase .rollingwindow .rollingtext div {
+  width: 25%;
+  margin: auto;
+}
+
 /* T A R G E T S    T A R G E T S   T A R G E T S   T A R G E T S   T A R G E T S     */
 #close:target ~ .menuOpen {
   display: block;
@@ -1118,6 +1201,66 @@ div.sidebarmenu {
   background-color: #fbfbfb;
   border-top: 3px solid red;
   border-bottom: 1px solid white;
+}
+
+#goleft1:target ~ .rollingwindow .rollingtext > div {
+  -webkit-transform: translatex(-100%);
+          transform: translatex(-100%);
+}
+
+#goright1:target ~ .rollingwindow .rollingtext > div {
+  -webkit-transform: translatex(100%);
+          transform: translatex(100%);
+}
+
+#goleft1:target ~ .twoL,
+#goright1:target ~ .twoR {
+  display: block;
+}
+
+#goleft1:target ~ .oneL,
+#goright1:target ~ .oneR {
+  display: none;
+}
+
+#goleft2:target ~ .rollingwindow .rollingtext > div {
+  -webkit-transform: translatex(-200%);
+          transform: translatex(-200%);
+}
+
+#goright2:target ~ .rollingwindow .rollingtext > div {
+  -webkit-transform: translatex(200%);
+          transform: translatex(200%);
+}
+
+#goleft2:target ~ .threeL,
+#goright2:target ~ .threeR {
+  display: block;
+}
+
+#goleft2:target ~ .twoL,
+#goright2:target ~ .twoR {
+  display: none;
+}
+
+#goleft3:target ~ .rollingwindow .rollingtext > div {
+  -webkit-transform: translatex(-300%);
+          transform: translatex(-300%);
+}
+
+#goright3:target ~ .rollingwindow .rollingtext > div {
+  -webkit-transform: translatex(300%);
+          transform: translatex(300%);
+}
+
+#goleft3:target ~ .fourL,
+#goright3:target ~ .fourR {
+  display: block;
+}
+
+#goleft3:target ~ .threeL,
+#goright3:target ~ .threeR {
+  display: none;
 }
 
 /*  END OF T A R G E T S        END OF T A R G E T S        END OF T A R G E T S      */
