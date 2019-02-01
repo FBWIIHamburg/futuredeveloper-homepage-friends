@@ -761,24 +761,23 @@ $leftshift:-100%;
     width:100%;
     height: 500px;
     position: relative;
-    background-color: yellow;
-    padding-top:100px;
+    background-color: rgb(100, 100, 100);
+    padding-top:10%;
     padding-bottom: 100px;
     .rightarrow{
         position: absolute;
         top:50%;
         right:50px;
-        font-size: 30px;
-        color:red;
+        font-size: 50px;
+        color:$darkgray;
         display:none;
+        opacity: 0.2;
     }
     .leftarrow{
-        position: absolute;
-        top:50%;
+        @extend .rightarrow;
         left:50px;
-        font-size: 30px;
-        color:red;
-        display:none;
+
+
     }
     .oneR{display: block;}
     .oneL{display:block;}
@@ -786,7 +785,6 @@ $leftshift:-100%;
         width:800px;
         height: 300px;
         opacity: 1;
-        background-color: green;
         margin:auto;
         position: relative;
         overflow: hidden;
@@ -795,13 +793,15 @@ $leftshift:-100%;
             top:0;
             left:0;
             font-size: 20px;
-            padding:40px;
             width:400%;
             display: flex;
             justify-content: space-evenly;
+            background-color: $darkgray;
+            transition: transform 1s;
             div{
                 width: 25%;
                 margin:auto;
+                padding:40px;
                 // transform: translateX($leftshift);
             }
 
@@ -923,49 +923,101 @@ display:none;
 
 }
 
-#goleft1:target~.rollingwindow .rollingtext >div{
-    transform: translatex(-100%);
+#goleft1:target~.rollingwindow .rollingtext {
+    transform: translatex(-25%);
 }
-#goright1:target~.rollingwindow .rollingtext >div{
-    transform: translatex(+100%);
+#goright1:target~.rollingwindow .rollingtext {
+    transform: translatex(-75%);
 }
 #goleft1:target ~ .twoL,
-#goright1:target ~ .twoR{
+#goleft1:target ~ .twoR{
+    display:block;
+}
+#goright1:target ~ .fourL,
+#goright1:target ~ .fourR{
     display:block;
 }
 #goleft1:target ~ .oneL,
-#goright1:target ~ .oneR{display:none;}
-
-
-
-#goleft2:target~.rollingwindow .rollingtext >div{
-    transform: translatex(-200%);
+#goleft1:target ~ .oneR,
+#goright1:target ~ .oneL,
+#goright1:target ~ .oneR{
+    display:none;
 }
-#goright2:target~.rollingwindow .rollingtext >div{
-    transform: translatex(+200%);
+
+
+
+#goleft2:target~.rollingwindow .rollingtext {
+    transform: translatex(-50%);
+}
+#goright2:target~.rollingwindow .rollingtext {
+    transform: translatex(0%);
 }
 #goleft2:target ~ .threeL,
-#goright2:target ~ .threeR{
+#goleft2:target ~ .threeR{
+    display:block;
+}
+#goright2:target ~ .oneL,
+#goright2:target ~ .oneR{
     display:block;
 }
 #goleft2:target ~ .twoL,
-#goright2:target ~ .twoR{display:none;}
-
-
-
-#goleft3:target~.rollingwindow .rollingtext >div{
-    transform: translatex(-300%);
+#goleft2:target ~ .twoR,
+#goleft2:target ~ .oneL,
+#goleft2:target ~ .oneR,
+#goright2:target ~ .twoL,
+#goright2:target ~ .twoR{
+    display:none;
 }
-#goright3:target~.rollingwindow .rollingtext >div{
-    transform: translatex(+300%);
+
+
+
+#goleft3:target~.rollingwindow .rollingtext {
+    transform: translatex(-75%);
+}
+#goright3:target~.rollingwindow .rollingtext{
+    transform: translatex(-25%);
 }
 #goleft3:target ~ .fourL,
-#goright3:target ~ .fourR{
+#goleft3:target ~ .fourR{
+    display:block;
+}
+#goright3:target ~ .twoL,
+#goright3:target ~ .twoR{
     display:block;
 }
 #goleft3:target ~ .threeL,
-#goright3:target ~ .threeR{display:none;}
+#goleft3:target ~ .threeR,
+#goleft3:target ~ .oneL,
+#goleft3:target ~ .oneR,
+#goright3:target ~ .threeL,
+#goright3:target ~ .threeR,
+#goright3:target ~ .oneL,
+#goright3:target ~ .oneR{
+    display:none;
+}
 
+#goleft4:target~.rollingwindow .rollingtext {
+    transform: translatex(0%);
+}
+#goright4:target~.rollingwindow .rollingtext{
+    transform: translatex(-50%);
+}
+#goleft4:target ~ .oneL,
+#goleft4:target ~ .oneR{
+    display:block;
+}
+#goright4:target ~ .threeL,
+#goright4:target ~ .threeR{
+    display:block;
+}
+#goleft4:target ~ .fourL,
+#goleft4:target ~ .fourR,
+#goright4:target ~ .fourL,
+#goright4:target ~ .fourR,
+#goright4:target ~ .oneL,
+#goright4:target ~ .oneR{
+    display:none;
+}
 
 
 
