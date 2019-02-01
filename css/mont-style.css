@@ -83,23 +83,6 @@
 
 
 
-@media only screen and (max-width: 700px) {
-    .mont-firstDiv{
-       display: flex;
-       flex-direction: row;
-       flex-wrap: wrap;
-       justify-content: center;
-
-        
-    }
-
-    .mont-firstDiv div{
-        width: 50%;
-        position: relative;        
-        }     
-
-} 
-
 .bcw-web{
     margin-bottom: 5vh;
     background-color:#5bbad5;
@@ -181,4 +164,24 @@ button:hover {
 .bigButton:hover{
     background-color: transparent;
     color: white;
+}
+
+
+
+
+@media only screen and (max-width: 700px) {
+    
+.bcw-web {
+    left: -25%;
+    width: 100%;
+    overflow: hidden;
+    
+    
+}
+.bcw-web div:nth-child(4){
+    width: 100%;
+    display: none;
+    
+}
+
 }
