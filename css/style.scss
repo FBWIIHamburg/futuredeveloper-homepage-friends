@@ -772,12 +772,15 @@ $leftshift:-100%;
         color:$darkgray;
         display:none;
         opacity: 0.2;
+        width:50px;
+        z-index: 3;
+        &:hover{
+        opacity: .4;
+        }
     }
     .leftarrow{
         @extend .rightarrow;
         left:50px;
-
-
     }
     .oneR{display: block;}
     .oneL{display:block;}
@@ -787,6 +790,8 @@ $leftshift:-100%;
         opacity: 1;
         margin:auto;
         position: relative;
+        box-shadow:inset 0 0  50px #000001;
+
         overflow: hidden;
         .rollingtext{
             position: absolute;
@@ -796,7 +801,6 @@ $leftshift:-100%;
             width:400%;
             display: flex;
             justify-content: space-evenly;
-            background-color: $darkgray;
             transition: transform 1s;
             div{
                 width: 25%;
@@ -1029,6 +1033,14 @@ display:none;
     .hideHolder{
         width:18vw;
     }
+    .rollingbase .rollingwindow{
+        width:600px;
+        height: 400px;
+    }
+    .rollingbase{
+        min-height: 600px;
+    }
+
 }
 @media only screen and (max-width: 1000px) {
     .hideHolder{
@@ -1057,10 +1069,13 @@ display:none;
         padding-top:0px;
     }
 
-
-
-
-    
+    .rollingbase .rollingwindow{
+        width:400px;
+        height: 600px;
+    }   
+    .rollingbase{
+        min-height: 700px;
+    }
 
 }
 
@@ -1139,6 +1154,14 @@ display:none;
          padding-top:0px;
      }
 
-
+     .rollingbase{
+         height: 600px;
+         .rollingwindow{
+              height: 500px;
+            .rollingtext{
+                font-size: 16px;
+            }
+         }
+     }
  
  }
