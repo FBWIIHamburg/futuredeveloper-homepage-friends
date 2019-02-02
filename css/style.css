@@ -10,7 +10,12 @@ html {
 .mainPage > .leftpage, .mainPage .rightpage {
   margin-top: 80px;
   width: 45%;
-  background-color: #d2d2d2;
+  background-color: #fbfbfb;
+  overflow: hidden;
+  border: 1px solid #b4b4b4;
+  float: left;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 
 * {
@@ -29,10 +34,25 @@ html {
   /* 16:9 */
   /* padding-bottom: 56.25%; */
   padding-top: 0px;
-  /* height: 0; */
   padding-bottom: 0;
   height: 133%;
   z-index: -2;
+  /* background-color: red; */
+  top: 0;
+  left: 0;
+}
+
+.container-transparent {
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  /* 16:9 */
+  /* padding-bottom: 56.25%; */
+  padding-top: 0px;
+  padding-bottom: 0;
+  height: 133%;
+  z-index: 0;
+  opacity: 0;
   /* background-color: red; */
   top: 0;
   left: 0;
@@ -66,6 +86,7 @@ video {
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
+  z-index: -5;
 }
 
 /* iframe {
@@ -806,6 +827,7 @@ div.sidebarmenu {
   background-color: white;
   z-index: 1;
   text-align: center;
+  overflow: hidden;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -816,15 +838,6 @@ div.sidebarmenu {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-.mainPage > .leftpage {
-  background-color: #fbfbfb;
-  overflow: hidden;
-  border: 1px solid #b4b4b4;
-  float: left;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
 }
 
 .mainPage > .leftpage > .tabs {
@@ -946,15 +959,6 @@ div.sidebarmenu {
 }
 
 .mainPage .rightpage {
-  float: left;
-  margin-left: 2.5%;
-  margin-right: 2.5%;
-}
-
-.mainPage .rightpage {
-  background-color: #fbfbfb;
-  overflow: hidden;
-  border: 1px solid #b4b4b4;
   padding: 30px;
 }
 
@@ -999,7 +1003,6 @@ div.sidebarmenu {
 /* HERE IS THE BIGGINING OF THE ROLLING TEXT   */
 .rollingbase {
   width: 100%;
-  height: 500px;
   position: relative;
   background-color: #646464;
   padding-top: 10%;
@@ -1020,6 +1023,7 @@ div.sidebarmenu {
   left: 0;
   font-size: 20px;
   display: none;
+  margin-top: 20px;
 }
 
 .rollingbase .rightarrow, .rollingbase .leftarrow {
@@ -1052,8 +1056,8 @@ div.sidebarmenu {
 
 .rollingbase .rollingwindow {
   width: 800px;
-  height: 300px;
   opacity: 1;
+  min-height: 300px;
   margin: auto;
   position: relative;
   -webkit-box-shadow: inset 0 0  50px #000001;
@@ -1063,6 +1067,7 @@ div.sidebarmenu {
 
 .rollingbase .rollingwindow .rollingtext {
   position: absolute;
+  min-height: 300px;
   top: 0;
   left: 0;
   font-size: 20px;
@@ -1081,8 +1086,10 @@ div.sidebarmenu {
 
 .rollingbase .rollingwindow .rollingtext div {
   width: 25%;
-  margin: auto;
-  padding: 40px;
+  min-height: 300px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding: 50px;
 }
 
 /* T A R G E T S    T A R G E T S   T A R G E T S   T A R G E T S   T A R G E T S     */
@@ -1334,10 +1341,6 @@ div.sidebarmenu {
   }
   .rollingbase .rollingwindow {
     width: 600px;
-    height: 400px;
-  }
-  .rollingbase {
-    min-height: 600px;
   }
 }
 
@@ -1369,10 +1372,6 @@ div.sidebarmenu {
   }
   .rollingbase .rollingwindow {
     width: 400px;
-    height: 600px;
-  }
-  .rollingbase {
-    min-height: 700px;
   }
 }
 
@@ -1447,14 +1446,17 @@ div.sidebarmenu {
     padding-bottom: 10px;
     padding-top: 0px;
   }
-  .rollingbase {
-    height: 600px;
-  }
-  .rollingbase .rollingwindow {
-    height: 500px;
-  }
   .rollingbase .rollingwindow .rollingtext {
     font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  body {
+    width: 125%;
+  }
+  .logo2 {
+    width: 125%;
   }
 }
 /*# sourceMappingURL=style.css.map */
