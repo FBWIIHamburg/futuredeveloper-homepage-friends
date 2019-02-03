@@ -15,8 +15,6 @@ body{
     background: linear-gradient(#12c2e9,#c471ed,#f64f59)
 }
 
-
-
 /* @keyframes moveRight{
     from{
         transform: translateX(-100%); 
@@ -25,7 +23,6 @@ body{
         transform: translateX(0);  
     }
     } */
-
 
 .bcw-web{
     margin-bottom: 5vh;
@@ -81,8 +78,6 @@ button:hover {
     text-align: center;
    
 }
-
-    
     
 
 .bigHead{
@@ -178,7 +173,6 @@ button:hover {
 .mont-why div p{
     text-align: center;
     padding: 5vh 5vh;
-
 }
 
 
@@ -216,4 +210,3 @@ button:hover {
         display: none; 
     }
     }
-
