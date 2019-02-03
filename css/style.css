@@ -833,7 +833,7 @@ div.sidebarmenu {
 .mainPage {
   width: 100%;
   position: relative;
-  min-height: 120vh;
+  
   background-color: white;
   z-index: 0;
   text-align: center;
