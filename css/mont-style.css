@@ -28,7 +28,7 @@ body{
 
 
 .bcw-web{
-    margin-bottom: -55vh;
+    margin-bottom: 5vh;
     background-color:#5bbad5;
     width: 100%;
     position: relative;
@@ -119,7 +119,7 @@ button:hover {
 
 .mont-container{
     margin-top: 5vh;
-    height: 95vh;
+    height: 50vh;
     background-image:   linear-gradient(to right bottom,
     rgba(126, 213, 111),
     rgba(40, 180, 133));
