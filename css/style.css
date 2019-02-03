@@ -713,7 +713,7 @@ video {
 }
 
 .threeDivs > a {
-  width: 200px;
+  width: 250px;
   min-height: 200px;
   margin-left: 2px;
   padding-left: 2%;
@@ -1461,14 +1461,14 @@ div.sidebarmenu {
   .rollingbase .rollingwindow .rollingtext {
     font-size: 16px;
   }
+  .rollingbase .rollingwindow {
+    width: 400px;
+  }
 }
 
-@media only screen and (max-width: 400px) {
-  body {
-    width: 125%;
-  }
-  .logo2 {
-    width: 125%;
+@media only screen and (max-width: 420px) {
+  .rollingbase .rollingwindow {
+    width: 300px;
   }
 }
 /*# sourceMappingURL=style.css.map */
