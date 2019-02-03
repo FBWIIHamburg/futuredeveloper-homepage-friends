@@ -111,7 +111,9 @@ button:hover {
 }
 
 
-
+.very-big-container{
+    /* margin-top: 5px; */
+}
 .mont-container{
     margin-top: 5vh;
     height: 50vh;
@@ -178,7 +180,7 @@ button:hover {
 
 
 .bewertung{
-    font-size: 2.6rem;
+    font-size: 2.3rem;
     text-align: center;
     padding-bottom: 3rem;
     color: #387261;
