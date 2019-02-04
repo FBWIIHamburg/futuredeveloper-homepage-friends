@@ -1503,4 +1503,162 @@ div.sidebarmenu {
     width: 300px;
   }
 }
+
+
+
+
+
+footer{
+  background: #eee;
+  padding-top: 35px;
+  padding-bottom: 33px;
+  margin-bottom: -4px;
+}
+
+footer a {
+  color: #333;
+}
+
+
+.allfooter {
+  text-align: center;
+}
+
+footer a:hover {
+  color: #60A48C;
+}
+
+
+.container2 {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+@media (min-width: 1200px){
+.container2 {
+  width: 1170px;
+}}
+
+
+
+.icons {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+  position: relative;
+  top: 1px;
+}
+
+ul {
+  list-style: none;
+}
+
+.icons > li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+
+.s-icon-effect.facebook-icon {
+  background-position: -63px 0;
+}
+
+
+.s-icon-effect.linkedin-icon {
+  background-position: -93px 0;
+}
+
+.s-icon-effect.twitter-icon {
+  background-position: 0 0;
+}
+
+.s-icon-effect.instagram-icon {
+  background-position: -124px 0;
+}
+
+.s-icon-effect.pinterest-icon {
+  background-position: -155px 0;
+}
+
+.s-icon-effect {
+  background: url(../images/social-icons.png) center center no-repeat;
+  background-color: transparent;
+
+  transition: background 0.3s;
+  transition-property: background;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+
+.s-icon {
+  display: block;
+  overflow: hidden;
+  width: 31px;
+  height: 31px;
+  text-align: left;
+  text-indent: -9999px;
+}
+
+
+.s-icon-effect.pinterest-icon:hover {
+  background-color: #3b5998;
+  background-position: -155px -31px;
+}
+
+.s-icon-effect.instagram-icon:hover {
+  background-color: #3b5998;
+  background-position: -124px -31px;
+}
+.s-icon-effect.twitter-icon:hover {
+  background-color: #3b5998;
+  background-position: 0px -31px;
+}
+.s-icon-effect.linkedin-icon:hover {
+  background-color: #3b5998;
+  background-position: -93px -31px;
+}
+.s-icon-effect.facebook-icon:hover {
+  background-color: #3b5998;
+  background-position: -63px -31px;
+}
+
+
+
+
+.link {
+  font-family: "latoregular", Arial, sans-serif;
+  text-decoration: none;
+  outline: 0;
+
+}
+
+
+
+
+
+.footer-nav {
+  padding-top: 23px;
+  padding-bottom: 17px;
+}
+
+
+
+
+.footer-nav > ul > li {
+  display: inline-block;
+  border-right: 1px solid #333;
+  line-height: 15px;
+}
+
+.footer-nav > ul > li > a {
+  margin-right: 11px;
+  margin-left: 9px;
+
+}
 /*# sourceMappingURL=style.css.map */
