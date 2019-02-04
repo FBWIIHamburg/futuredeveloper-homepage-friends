@@ -180,28 +180,3 @@ button:hover {
     padding: 5vh 5vh;
 
 }
-
-
-/*  
-@media only screen and (max-width: 770px) {
-/*  */
-
-
-
-
-/* @media only screen and (max-width: 622px) {
-    .bcw-web div:nth-child(1) {  
-        width: 80%;    
-    }
-    .bcw-web div:nth-child(2), div:nth-child(3), div:nth-child(4){
-        display: none; 
-    }
-
-    .mont-why div:nth-child(1) {  
-        width: 80%;    
-    }
-    .mont-why div:nth-child(2), div:nth-child(3), div:nth-child(4){
-        display: none; 
-    }
-    }
-   */
